@@ -31,7 +31,14 @@ jobs:
       - run: node -v
   test-bash:
     runs-on: ubuntu-latest
+    defaults:
+        run:
+            working-directory: ./scripts
     steps:
-      - uses: actions/checkout@v4
-      - run: chmod u+x ./test.sh && ./test.sh
-
+        - name: Check out the repository to the runner
+          uses: actions/checkout@v4
+        - name: Make the script files executable
+          run: chmod +x test.sh
+        - name: Run the scripts
+          run: |
+           ./test.sh
