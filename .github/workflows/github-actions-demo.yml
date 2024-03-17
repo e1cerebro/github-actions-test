@@ -25,7 +25,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - id: foo
-        uses: e1cerebro/github-actions-test@v1
+        uses: e1cerebro/github-actions-test
         with:
          who-to-greet: 'Mona the Octocat'
 #   test-bash:
