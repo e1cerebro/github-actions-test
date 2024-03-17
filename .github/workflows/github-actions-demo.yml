@@ -27,7 +27,7 @@ jobs:
       - id: foo
         uses: ./.github/actions/test
         with:
-         who-to-greet: 'Mona the Octocat'
+          who-to-greet: 'Mona the Octocat'
 #   test-bash:
 #     runs-on: ubuntu-latest
 #     defaults:
